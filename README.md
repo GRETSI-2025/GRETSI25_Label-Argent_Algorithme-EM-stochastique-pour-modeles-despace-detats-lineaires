@@ -17,3 +17,19 @@ Les résultats suivants de l'article peuvent être reproduits :
 
 ```bash
 ./install.sh
+```
+
+## ⚙️ Installation
+
+Cloner ce dépôt et exécuter le script suivant pour créer un environnement Python virtuel et installer les dépendances :  
+`./install.sh`  
+Remarque : si vous préférez utiliser Conda, adaptez le script à partir d’un fichier `environment.yml`.
+
+## ▶️ Exécution
+
+Lancez l'exécution principale avec :  
+`./run.sh`  
+Cela lance le script `main.py`, qui effectue une itération complète de l'algorithme. Le temps d'exécution est estimé à **12 à 15 minutes par itération** sur la configuration décrite ci-dessous.
+
+## 📂 Structure du dépôt
+
