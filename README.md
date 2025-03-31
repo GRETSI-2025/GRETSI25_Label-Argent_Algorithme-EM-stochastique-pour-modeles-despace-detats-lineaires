@@ -33,3 +33,22 @@ Cela lance le script `main.py`, qui effectue une itération complète de l'algor
 
 ## 📂 Structure du dépôt
 
+em-impulsif-gretsi2025/
+├── README.md               # Ce fichier
+├── LICENSE                 # Licence du projet
+├── requirements.txt        # Dépendances Python
+├── install.sh              # Script d'installation
+├── run.sh                  # Script d'exécution
+├── src/                    # Code source de l'algorithme
+│   ├── main.py             # Point d'entrée
+│   ├── em.py               # Algorithme EM
+│   ├── model.py            # Modèle d’observation
+│   └── utils.py            # Fonctions utilitaires
+├── data/                   # Données d'entrée simulées
+│   └── visibilities.npz
+├── results/                # Résultats produits (figures, tableaux)
+│   ├── fig1.png
+│   └── table1_row3.txt
+└── notebooks/              # Notebook original (facultatif)
+    └── em_notebook_original.ipynb
+
