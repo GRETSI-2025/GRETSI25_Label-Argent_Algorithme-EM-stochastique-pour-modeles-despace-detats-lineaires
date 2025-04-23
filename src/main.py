@@ -1,10 +1,11 @@
 import numpy as np
+from scipy.io import loadmat
 import matplotlib.pyplot as plt
 from skimage.metrics import structural_similarity as ssim, peak_signal_noise_ratio as psnr
-from em import run_em_algorithm
+from em_opt import run_em_algorithm
 from utils import load_data, save_results, plot_results, forward_operator, save_image
 
-def main():
+def main(init=None):
     print("Loading data...")
     # Load data from the .npz file
     data = load_data('./data/data.npz')
@@ -17,9 +18,18 @@ def main():
     visibilities = data['visibilities']
     uvw = data['uvw']
     dirty = data['dirty']                  # Dirty image(s)
+    save_image(dirty, 'results/dirty_image.jpg')
+
     freq = data['freq']
     tau = data['texture_value']
     npixel = 64  # assuming image dimensions are 64x64
+
+    if init == "mvdr":
+        # read mat file
+        print("Loading MVDR initialization...")
+        mat = loadmat('./data/mvdr_init.mat')
+        dirty = mat['z_init']  # image is now a NumPy array
+        save_image(dirty, './results/mvdr_init.jpg')
 
     # Compute the forward operator
     FOp = forward_operator(uvw, freq, npixel, cellsize=None)
@@ -43,12 +53,18 @@ def main():
 
         
     save_image(model_images[-1], 'results/model_image.jpg')
-    save_image(dirty, 'results/dirty_image.jpg')
-    save_image(np.real(smoothed_estimates[-1][-1]), 'results/estimated_image.jpg')
+    save_image(np.real(smoothed_estimates[-1][-1]), 'results/estimated_image_wo_reg_no_opt.jpg')
 
 
     # Show figures interactively
     plt.show()
 
 if __name__ == '__main__':
-    main()
+    import argparse
+
+    parser = argparse.ArgumentParser(description='Run EM algorithm for robust image reconstruction.')
+    parser.add_argument('--init', type=str, default=None, help='Initialization method (e.g., "mvdr")')
+
+    args = parser.parse_args()
+
+    main(init=args.init)
