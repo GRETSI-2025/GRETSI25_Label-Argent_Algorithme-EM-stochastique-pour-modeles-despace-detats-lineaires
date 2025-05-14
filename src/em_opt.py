@@ -25,7 +25,7 @@ def run_em_algorithm(visibilities, dirty, FOp, model_images, tau, n_iterations=1
         Sigma=tau*np.eye(nvis)
     )
     
-    # In your code, X is taken to be visibilities.
+
     X = visibilities  # (Adjust if needed.)
     
     smoothed_estimates = []
