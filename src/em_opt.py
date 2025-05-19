@@ -15,7 +15,7 @@ def run_em_algorithm(visibilities, dirty, FOp, model_images, tau, n_iterations=1
       - visibilities, dirty, FOp, model_images: data inputs 
       - tau: initial tau parameter (or scaling)
     """
-    # Create the model.
+    # Create the state-space instance.
     model = StateSpaceModel(
         m0=dirty,            # initial state
         S0=np.eye(npixel2)*1e-3,
@@ -26,7 +26,8 @@ def run_em_algorithm(visibilities, dirty, FOp, model_images, tau, n_iterations=1
     )
     
 
-    X = visibilities  # (Adjust if needed.)
+    X = visibilities  # observed data
+    # Initialize the model parameters
     
     smoothed_estimates = []
     MMSE = []
