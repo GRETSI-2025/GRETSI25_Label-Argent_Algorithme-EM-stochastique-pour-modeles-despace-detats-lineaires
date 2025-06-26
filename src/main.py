@@ -5,7 +5,7 @@ from skimage.metrics import structural_similarity as ssim, peak_signal_noise_rat
 from em_opt import run_em_algorithm
 from utils import load_data, save_results, plot_results, forward_operator, save_image
 
-def main(init=None):
+def main(niter=10, init=None):
     print("Loading data...")
     # Load data from the .npz file
     data = load_data('./data/data.npz')
@@ -64,7 +64,8 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description='Run EM algorithm for robust image reconstruction.')
     parser.add_argument('--init', type=str, default=None, help='Initialization method (e.g., "mvdr")')
+    parser.add_argument('--niter', type=int, default=1, help='Number of iterations for the EM algorithm')
 
     args = parser.parse_args()
 
-    main(init=args.init)
+    main(niter=args.niter, init=args.init)
