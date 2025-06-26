@@ -36,7 +36,7 @@ def main(init=None):
     print("Starting EM algorithm...")
 
     # Run the EM algorithm for 2 iterations (adjust as needed)
-    model, smoothed_estimates, MMSE = run_em_algorithm(visibilities, dirty, FOp, model_images, tau, n_iterations=1)
+    model, smoothed_estimates, MMSE = run_em_algorithm(visibilities, dirty, FOp, model_images, tau, n_iterations=10)
 
     # Compute quality metrics comparing the final smoothed estimate with the ground truth.
     # Here model_images is the ground truth, and smoothed_estimates[-1] is the estimated image.
