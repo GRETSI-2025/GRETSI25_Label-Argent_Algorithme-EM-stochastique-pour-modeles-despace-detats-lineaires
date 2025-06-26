@@ -30,7 +30,7 @@ Lancez l'exécution principale avec :
 Cela lance le script `main.py`, qui effectue une itération complète de l'algorithme. Le temps d'exécution est estimé à **12 à 15 minutes par itération** sur la configuration décrite ci-dessous.
 
 ## Structure 
-
+```
 EM-gretsi2025/
 ├── README.md
 ├── LICENSE
@@ -48,5 +48,5 @@ EM-gretsi2025/
 │   └── (output files will be saved here)
 └── notebooks/
     └── gretsi_2025.ipynb   # Your original notebook
-
+```
 
