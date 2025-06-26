@@ -40,13 +40,12 @@ EM-gretsi2025/
 ├── src/
 │   ├── main.py
 │   ├── em.py
+│   ├── em_opt.py
 │   ├── model.py
 │   └── utils.py
 ├── data/
 │   └── visibilities.npz
 ├── results/
-│   └── (output files will be saved here)
-└── notebooks/
-    └── gretsi_2025.ipynb   # Your original notebook
+    └── (output files will be saved here)
 ```
 
