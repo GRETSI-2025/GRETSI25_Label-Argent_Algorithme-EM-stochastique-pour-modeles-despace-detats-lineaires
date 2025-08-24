@@ -1,5 +1,15 @@
 # Algorithme EM stochastique pour modèles d’espace d’états linéaires en bruits impulsifs : application à la radio-interférométrie
 
+<hr>
+
+**_Dépôt labelisé dans le cadre du [Label Reproductible du GRESTI'25](https://gretsi.fr/colloque2025/recherche-reproductible/)_**
+
+| Label décerné | Auteur | Rapporteur | Éléments reproduits | Liens |
+|:-------------:|:------:|:----------:|:-------------------:|:------|
+| ![](label_argent.png) | Nawel ARAB<br>[@NawelAr](https://github.com/NawelAr) | David JIA<br>[@djia09-research](https://github.com/djia09-research) |  Figure 1<br>Table 1, ligne 3 | 📌&nbsp;[Dépôt&nbsp;original](https://github.com/NawelAr/GRETSI-2025-submission)<br>⚙️&nbsp;[Issue](https://github.com/GRETSI-2025/Label-Reproductible/issues/29)<br>📝&nbsp;[Rapport](https://github.com/akrah/test/tree/main/rapports/Rapport_issue_29) |
+
+<hr>
+
 Ce dépôt contient le code source associé à l'article soumis au GRETSI 2025. L’objectif est de proposer un algorithme Expectation-Maximization (EM) stochastique adapté aux modèles d’espace d’états linéaires soumis à du bruit impulsif, avec une application concrète à la reconstruction d’images en radio-interférométrie.
 
 ## 🧪 Reproductibilité
